@@ -71,10 +71,16 @@ function PromedioColor(numero)
     if(numero >= 6)
     {
         colores.style.color= "green";
+        imagenResultado.src = 'Aprobado.jpg';
     }
-    else
+    else if(numero>=1 && numero <6)
     {
         colores.style.color= "red";
+        imagenResultado.src = 'Desaprobado.png';
+    }
+    else{
+        colores.style.color= "black";
+        imagenResultado.src = 'NoCompletoDatos.jpg';
     }
 }
 
