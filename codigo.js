@@ -50,9 +50,18 @@ function MejorMateria(){
     if(mate >= lengua && mate >= efsi) mayorNota = mate;
     else if(efsi >= lengua && efsi >= mate) mayorNota = efsi;
     else mayorNota = lengua;
-    if(mayorNota == mate) output += "Matematica ";
-    if(mayorNota == lengua) output +="Lengua ";
-    if(mayorNota == efsi) output +="Efsi";
+    if(mayorNota == mate){
+        output += "Matematica "; 
+        imagenResultado.src = 'Mate.jpg';
+    } 
+    if(mayorNota == lengua){
+        output +="Lengua ";
+        imagenResultado.src = 'Lengua.png';
+    } 
+    if(mayorNota == efsi){
+        output +="Efsi";
+        imagenResultado.src = 'EFSI.png';
+    } 
     document.getElementById("resultado2").innerHTML = `<h3>${output}</h3>`;
     document.getElementById("resultado2").style.color = "blue";
 }
